@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAC Generator</title>
+</head>
+<body>
+    <h2>Three Address Code Generator</h2>
+    
+    <form method="POST">
+        <label>Enter Code:</label><br>
+        <textarea name="input_code" rows="5" cols="50"></textarea><br>
+        <button type="submit">Generate TAC</button>
+    </form>
+
+    {% if tac_output %}
+        <h3>Generated TAC:</h3>
+        <pre>{{ tac_output }}</pre>
+        <button onclick="location.reload();">Test Another Code</button>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,11 @@
+int i = 0, j = 0;
+L0: if i < 10 { == false goto L1
+if j < 5 { == false goto L2
+j = j + 1;
+goto L3
+L2:
+j = 0;
+i = i + 1;
+L3:
+goto L0
+L1:

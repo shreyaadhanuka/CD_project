@@ -10,14 +10,14 @@
     
     <form method="POST">
         <label>Enter Code:</label><br>
-        <textarea name="input_code" rows="5" cols="50"></textarea><br>
+        <textarea name="input_code" rows="5" cols="50">{{ request.form['input_code'] if request.form['input_code'] else '' }}</textarea><br>
         <button type="submit">Generate TAC</button>
     </form>
 
     {% if tac_output %}
         <h3>Generated TAC:</h3>
         <pre>{{ tac_output }}</pre>
-        <button onclick="location.reload();">Test Another Code</button>
+        <button onclick="window.location.href='/'">Test Another Code</button>
     {% endif %}
 </body>
 </html>
